@@ -1,0 +1,61 @@
+h1 {
+  color: orange;
+  text-align: center;
+  text-decoration: underline;
+}
+body {
+  background-color: gray;
+  
+}
+div {
+  color: black;
+  float: left;
+  width: 30%;
+  height: 500px;
+ margin-top: 50px;
+ margin-left: 30px;
+ margin-bottom: 30px;
+ background-color:rgb(77, 59, 141);
+
+}
+h2 {
+  color: palevioletred;
+  text-align: center;
+  text-decoration: underline;
+}
+
+  
+
+img {
+  width: 75%;
+  height: 300px;
+padding-left: 80px;
+
+}
+li{
+  list-style:square;
+  
+}
+
+.first{
+  background-color:rgb(77, 59, 141);
+}
+.second{
+  background-color:rgb(77, 59, 141);
+}
+.third
+{
+  background-color:rgb(77, 59, 141);
+}
+.four
+{
+  background-color:rgb(77, 59, 141);
+}
+.five
+{
+  background-color:rgb(77, 59, 141);
+}
+.six
+{
+  
+}
