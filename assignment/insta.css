@@ -1,0 +1,50 @@
+.ma{
+    margin-top: 100px;
+    margin-right: 100px;
+    margin-left: 300px;
+}
+.co{
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+border-radius: 1px;
+padding-top: 10px;
+
+}
+h1{
+    text-align: center;
+}
+.in{
+    margin-bottom: 10px;
+}
+.co button{
+    margin-top: 15px;
+    color: rgb(242, 245, 250);
+    background-color: rgb(161, 190, 237);
+    border-color: transparent;
+}
+.ab
+{
+padding: 5px;
+padding-left: 80px;
+color: rgb(198, 202, 206);
+}
+.fb
+{
+padding-left: 100px;
+padding-top: 30px;}
+.btn
+{
+    border:transparent;
+    color: rgb(45, 47, 68);
+    padding-left: 15px;
+    font-weight: lighter;
+
+}
+.d1{
+    margin-top: 10px;
+    padding: 30px;
+    padding-left: 100px;
+}
+.d2{
+    margin-top: 5px;
+    padding-left: 140px;
+}
