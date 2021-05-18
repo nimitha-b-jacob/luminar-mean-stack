@@ -6,10 +6,10 @@
         
      
         
-            <input type="text" placeholder="Ennter accno"  [value]=" accno" class="tx"id="acn" #ac><br>
-            <input type="password" placeholder="Ennter password"class="tx" id="pwd" #ps>
+            <input type="text" placeholder="Ennter accno"  [value]=" accno" class="tx"id="acn" [(ngModel)]="accno"><br>
+            <input type="password" placeholder="Ennter password"class="tx" id="pwd" [(ngModel)]="pwd">
             <br>
-            <button class="btn btn-success bb" (click)="login(ac,ps)">login</button>
+            <button class="btn btn-success bb" (click)="login()">login</button>
             
         
         

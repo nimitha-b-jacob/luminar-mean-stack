@@ -52,10 +52,10 @@ export class LoginComponent implements OnInit {
     console.log(this.pwd);
     
   }*/
-  login(a:any,p:any)
+  login()
   {
-    var acno=a.value
-    var pwd=p.value
+    var acno=this.accno
+    var pwd=this.pwd
     let users = this.accountdetails
   
     if (acno in users) 
