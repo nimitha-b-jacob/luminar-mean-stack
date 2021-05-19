@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -35,7 +36,7 @@ export class LoginComponent implements OnInit {
       balance: 6000,
     },
   }
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -64,6 +65,7 @@ export class LoginComponent implements OnInit {
       {
         
         alert("success")
+        this.router.navigateByUrl("dashboard")
       }
       else
       {
@@ -75,5 +77,9 @@ export class LoginComponent implements OnInit {
        
       alert("no account")
     }
+  }
+  register()
+  {
+    this.router.navigateByUrl("register")
   }
 }
