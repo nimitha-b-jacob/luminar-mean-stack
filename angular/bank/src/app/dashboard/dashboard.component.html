@@ -1,1 +1,33 @@
-<p>dashboard works!</p>
+<h1>YES BANK</h1>
+    <div class="container rl">
+        
+        <div class="row ">
+            <form (ngSubmit)="deposit()">
+            <div class=" vc">
+                <h3><u>DEPOSIT</u></h3>
+
+                <input type="text" placeholder="Ennter accno" class="tx" name="acn"  [(ngModel)]="dAccno">
+                <input type="text" placeholder="Ennter password"class="tx" name="pwd"  [(ngModel)]="dPswd">
+                
+                <input type="text" placeholder="Ennter amount"class="tx" name="amt"  [(ngModel)]="dAmount">
+
+                <input type="submit" class="btn btn-success bb" value="Deposit">
+              
+            </div>
+          </form>
+          <form (ngSubmit)="withdraw()">
+            <div class="vc">
+            <h3><u>WITHDRAW </u></h3>
+                <input type="text" placeholder="Ennter accno" class="tx" name="acn"  [(ngModel)]="wAccno">
+                <input type="text" placeholder="Ennter password"class="tx" name="pwd"  [(ngModel)]="wPswd">
+                <input type="text" placeholder="Ennter amount"class="tx" name="amt"  [(ngModel)]="wAmount">
+
+                <input type="submit" class="btn btn-success bb" value="Withdraw">
+                
+            
+            </div>
+        </form>
+            
+        </div>
+    </div>
+

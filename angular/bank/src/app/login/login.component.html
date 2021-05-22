@@ -1,19 +1,21 @@
 <h1>YES BANK </h1>
 <h2>{{ab}}</h2>
+
 <div class="container rl">
     
     <div class="vc">
         
-     
+        <form (ngSubmit)="login()">
         
-            <input type="text" placeholder="Ennter accno"  [value]="accno" class="tx"id="acn" [(ngModel)]="accno"><br>
-            <input type="password" placeholder="Ennter password"class="tx" id="pwd" [(ngModel)]="pwd">
+            <input type="text" placeholder="Ennter accno" name="accno"  class="tx"id="acn" [(ngModel)]="accno"><br>
+            <input type="password" placeholder="Ennter password"class="tx" name="pwd" id="pwd" [(ngModel)]="pwd">
             <br>
-            <button class="btn btn-success bb" (click)="login()">login</button><br>
+            <input type="submit" class="btn btn-success bb" value="Login">
             <button class="btn btn-success bb cl"  (click)="register()">crete new account</button>
             
-        
+        </form>
         
 
     </div>
 </div>
+

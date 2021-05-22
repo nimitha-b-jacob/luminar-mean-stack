@@ -5,14 +5,21 @@
     
     <div class="vc">
         
-     
-        <input type="text" placeholder="Ennter username"  class="tx"id="uname" [(ngModel)]="uname"><br>
-            <input type="text" placeholder="Ennter accno"  class="tx"id="acn" [(ngModel)]="accno"><br>
-            <input type="password" placeholder="Ennter password"class="tx" id="pwd" [(ngModel)]="pwd">
+     <form [formGroup]="registerform" (ngSubmit)="register()">
+            <input type="text" placeholder="Ennter username" name="uname"  class="tx"id="uname" formControlName="uname"><br>
+            <div *ngIf="(this.registerform.get('uname').touched || this.registerform.get('uname').dirty)&& this.registerform.get('uname').errors">
+                invalid username
+            </div>
+            <input type="text" placeholder="Ennter accno" name="accno" class="tx"id="acn" formControlName="acno"><br>
+            <div *ngIf="(this.registerform.get('acno').touched || this.registerform.get('acno').dirty)&& this.registerform.get('acno').errors">
+                invalid username
+            </div>
+            <input type="password" placeholder="Ennter password" name="pwd" class="tx" id="pwd" formControlName="pwd">
             <br>
-            <button class="btn btn-success bb cl"  (click)="register()">Register</button>
+            <input type="submit" class="btn btn-success bb cl"  value="Register"><br>
+            <a routerLink="">LogIn</a>
             
-        
+      </form>
         
 
     </div>
