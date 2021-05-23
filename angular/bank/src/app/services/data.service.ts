@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
+  currentuser=""
   accountdetails:any = {
     1000: {
       acno: 1000,
@@ -33,6 +34,26 @@ export class DataService {
   }
 
   constructor() { }
+  saveDetails()
+  {
+    localStorage.setItem("accountDetails",JSON.stringify(this.accountdetails))
+    if(this.currentuser)
+    { 
+    localStorage.setItem("currentUser",JSON.stringify(this.currentuser))
+  }
+}
+   getDetails()
+   {
+     if(localStorage.getItem("accounttDetails"))
+     {
+     this.accountdetails=JSON.parse(localStorage.getItem("accountDetails") || "")
+     }
+     if(localStorage.getItem("currentUser"))
+     {
+       this.currentuser=JSON.parse(localStorage.getItem("currentUser") || "")
+
+     }
+   }
   register(acno:any,uname:any,pswd:any)
   {
     let user=this.accountdetails
@@ -49,6 +70,7 @@ export class DataService {
        balance:0
       
     }
+    this.saveDetails()
     return true
    
   }
@@ -62,7 +84,8 @@ export class DataService {
       if ((pwd == users[acno]["password"])) 
       {
         
-        
+        this.currentuser=users[acno]["username"]
+        this.saveDetails()
         return true
       }
       else
@@ -87,6 +110,7 @@ export class DataService {
       if ((pwd == users[acno]["password"])) 
       {
         users[acno]["balance"]+=amount
+        this.saveDetails()
         
         return users[acno]["balance"]
       }
@@ -114,6 +138,7 @@ export class DataService {
         if(users[acno]["balance"]>amount)
         { 
         users[acno]["balance"]-=amount
+        this.saveDetails()
         
         return users[acno]["balance"]
         }

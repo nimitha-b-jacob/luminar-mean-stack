@@ -21,11 +21,7 @@ export class RegisterComponent implements OnInit {
   }
   register()
   {
-    console.log(this.registerform.get('uname').errors);
-    if(this.registerform.get('uname')?.errors)
-    {
-      alert("invalid uname")
-    }
+    
     if(this.registerform.valid)
     {
       var acno=this.registerform.value.acno

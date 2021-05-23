@@ -5,11 +5,16 @@
     
     <div class="vc">
         
-        <form (ngSubmit)="login()">
+        <form [formGroup]="loginform" (ngSubmit)="login()">
         
-            <input type="text" placeholder="Ennter accno" name="accno"  class="tx"id="acn" [(ngModel)]="accno"><br>
-            <input type="password" placeholder="Ennter password"class="tx" name="pwd" id="pwd" [(ngModel)]="pwd">
-            <br>
+            <input type="text" placeholder="Ennter accno" name="accno"  class="tx"id="acn" formControlName="acno"><br>
+            <div *ngIf="(this.loginform.get('acno').touched || this.loginform.get('acno').dirty)&& this.loginform.get('acno').errors">
+                invalid account no
+            </div>
+            <input type="password" placeholder="Ennter password"class="tx" name="pwd" id="pwd" formControlName="pwd">  <br>
+            <div *ngIf="(this.loginform.get('pwd').touched || this.loginform.get('pwd').dirty)&& this.loginform.get('pwd').errors">
+                invalid password
+            </div>
             <input type="submit" class="btn btn-success bb" value="Login">
             <button class="btn btn-success bb cl"  (click)="register()">crete new account</button>
             

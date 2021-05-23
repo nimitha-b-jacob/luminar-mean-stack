@@ -12,10 +12,12 @@
             </div>
             <input type="text" placeholder="Ennter accno" name="accno" class="tx"id="acn" formControlName="acno"><br>
             <div *ngIf="(this.registerform.get('acno').touched || this.registerform.get('acno').dirty)&& this.registerform.get('acno').errors">
-                invalid username
+                invalid account no
             </div>
-            <input type="password" placeholder="Ennter password" name="pwd" class="tx" id="pwd" formControlName="pwd">
-            <br>
+            <input type="password" placeholder="Ennter password" name="pwd" class="tx" id="pwd" formControlName="pwd"><br>
+            <div *ngIf="(this.registerform.get('pwd').touched || this.registerform.get('pwd').dirty)&& this.registerform.get('pwd').errors">
+                invalid password
+            </div>
             <input type="submit" class="btn btn-success bb cl"  value="Register"><br>
             <a routerLink="">LogIn</a>
             
